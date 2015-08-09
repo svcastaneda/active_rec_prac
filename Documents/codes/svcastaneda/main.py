@@ -76,7 +76,7 @@ class ContactHandler(webapp2.RequestHandler):
 
 routes = [
     ('/', HomeHandler),
-    ('/resume', EditResumeHandler),
+    ('/resume', ResumeHandler),
     ('/projects', ProjectsHandler),
     ('/contact', ContactHandler),
     # (r'^(/admin)(.*)$', appengine_admin.Admin),

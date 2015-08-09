@@ -1,9 +1,8 @@
 body {
-
 	background-color: #B2D9D9;
 	/*   color: #D9B2B2; */
 	color: #751919;
-	padding: 50px;
+	min-width: 830px;
 }
 
 h3, p {
@@ -13,10 +12,8 @@ h3, p {
 #body {
 	background-color: #EEE;
 	border-radius: 10px;
-	min-width: 750px;
-	max-width: 875px;
 	overflow: auto;
-	margin: 0 auto;
+	margin: 50px 7%;
 }
 
 #header {
