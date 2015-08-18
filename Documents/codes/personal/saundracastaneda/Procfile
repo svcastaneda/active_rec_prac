@@ -1,0 +1,1 @@
+web: gunicorn saundracastaneda.wsgi --log-file -

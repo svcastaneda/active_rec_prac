@@ -1,0 +1,107 @@
+body {
+	background-color: #B2D9D9;
+	/*   color: #D9B2B2; */
+	color: #751919;
+	min-width: 875px;
+	max-width: 925px;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+h3, p {
+	margin: 5px 5px 3px 5px;
+}
+
+#body {
+	background-color: #EEE;
+	border-radius: 10px;
+	overflow: auto;
+	margin: 50px 7%;
+}
+
+#header {
+	padding-top: 10px;
+	background-color: #008080;
+	color: #F7FBFB;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	min-width: 500px;
+}
+
+#links a {
+	color: #555;
+	padding: 0 2%;
+	opacity: 0.85;
+}
+
+#links {
+	background-color: #AAA;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+
+}
+
+#links a:hover {
+	opacity: 1.0;
+	text-decoration: none;
+	background-color: #C1C1C1;
+}
+
+
+
+.text {
+	padding: 10px 0px 20px 25px;
+	float: left;
+	color: black;
+}
+
+table {
+	margin-bottom: 25px;
+}
+
+#education ul {
+	list-style: none;
+}
+
+#contactinfo {
+	text-align: center;
+	float: inherit;
+}
+
+td {
+	max-width: 750px;
+	min-width: 125px;
+}
+
+ul {
+	margin: 0px 0px 10px 0px;
+}
+
+#pictures {
+	float: right;
+	border: dotted grey;
+	width: 365px;
+	height: 247px;
+	margin: 25px;
+}
+
+#dogs {
+	float: right;
+	width: 100px;
+/*	height: 250px;*/
+/*	padding-left: 3px;*/
+	text-align: center;
+	margin-right: 15px;
+}
+
+#dogs img {
+	margin-bottom: 5px;
+}
+
+#header h1 {
+	color: #F7FBFB;;
+}
