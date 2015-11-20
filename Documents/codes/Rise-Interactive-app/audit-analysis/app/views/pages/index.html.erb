@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		
+		<title>Web Analytics Tracking Form</title>
+	</head>
+	<body>
+		<div id="main">
+			<header>
+				<a href="index.html"><img src="http://1gga5c4bwhrvq4yfj1x22pxl1r.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/Rise_Logo.png"></a>
+				<h1>Analytics Site Audit Analysis Form</h1>
+			</header>
+			
+			<form id="trackingForm">
+				<label for="websiteURL">Website url: </label>
+				<input type="url" id="websiteURL">
+
+				<hr>
+
+				<p><label>Does the website have:</label><p>
+				<input type="radio" name="trackingType" value="Google Analytics" id="GoogleAnalytics" required><label for="GoogleAnalytics">Google Analytics</label><br>
+				<input type="radio" name="trackingType" value="Adobe Analytics" id="AdobeAnalytics" required><label for="AdobeAnalytics">Adobe Analytics</label><br>
+				<input type="radio" name="trackingType" value="Google Analytics and Adobe Analytics" id="bothTrackingTypes" required><label for="bothTrackingTypes">Both</label><br>
+				<input type="radio" name="trackingType" value="no tracking tool" id="noTrackingTypes" required><label for="noTrackingTypes">None</label><br>
+				<input type="radio" name="trackingType" value="other" id="otherTrackingType" required><label for="otherTrackingType">Other </label><input type="text" name="otherTrackingType" id="otherTrackingTypeInput"><br>
+				
+				<hr>
+
+				<fieldset class="gaStuff">
+					<legend>Google Analytics</legend>
+					<label for="gaID">What is the main GA account/property ID?</label>
+					<input type="text" name="mainGoogleID" placeholder="xxxxxx" class="gaID" id="gaID"><br>
+
+					<label for="GoogleNotes">Notes:</label><br>
+					<textarea rows="7" id="GoogleNotes"></textarea>
+
+					<label for="GoogleAccountRecs">Recommendations:</label>
+					<textarea rows="7" id="GoogleAccountRecs"></textarea>
+
+					<hr>
+
+					<p><label>Does the website have classic GA or UA?</label></p>
+					<input type="radio" name="GAType" value="classic" id="classic"><label for="classic">GA</label><br>
+					<input type="radio" name="GAType" value="UA" id="UA"><label for="UA">UA</label><br>
+
+					<hr>
+
+
+					<p>Do we have GA access?</p>
+					<input type="radio" name="GoogleAccess" value="yes" id="yesGoogleAccess"><label for="yesGoogleAccess">Yes</label><br>
+					<input type="radio" name="GoogleAccess" value="no" id="noGoogleAccess"><label for="noGoogleAccess">No</label><br>
+
+					<!-- if yes -->
+					<div id="hasGoogleAccess">
+						<p><label for="GoogleAccountSetup">Account Structure Setup</label></p>
+						<textarea rows="7" name="GoogleAccountSetup" id="GoogleAccountSetup"></textarea>
+
+						<hr>
+
+						<p>Are there any goals configured?</p>
+						<input type="radio" name="GoogleGoals" value="yes" id="GoogleYesGoals"><label for="GoogleYesGoals">Yes</label><br>
+						<input type="radio" name="GoogleGoals" value="no" id="GoogleNoGoals"><label for="GoogleNoGoals">No</label>
+
+						<p name="GoogleHasGoals">Current Goals:</p>
+						<textarea rows="7" placeholder="Type a brief description of the goals." name="GoogleHasGoals" id="GoogleGoalDescription"></textarea>
+						<p>Recommended Goals:</p>
+						<textarea rows="7" placeholder="Type a brief decsription of goal recommendations." id="GoogleGoalRecs"></textarea>
+						
+						<hr>
+
+						<p>Are there any filters configured?</p>
+						<input type="radio" name="GoogleFilters" value="yes" id="GoogleYesFilters"><label for="GoogleYesFilters">Yes</label><br>
+						<input type="radio" name="GoogleFilters" value="no" id="GoogleNoFilters"><label for="GoogleNoFilters">No</label>
+
+						<p name="GoogleHasFilters">Current Filters:</p>
+						<textarea rows="7" placeholder="Type a brief description of the filter configurations." name="GoogleHasFilters" id="GoogleFilterDescription"></textarea>
+						<p>Recommended filters:</p>
+						<textarea rows="7" placeholder="Type a brief description of filter recommendations." id="GoogleFilterRecs"></textarea>
+
+						<hr>
+
+						<p><label>Are there any events being tracked?</label></p>
+						<input type="radio" name="GoogleEvents" value="yes" id="yesEvents"><label for="yesEvents">Yes</label><br>
+						<input type="radio" name="GoogleEvents" value="no" id="noEvents"><label for="noEvents">No</label>
+
+						<p name="GoogleHasEvents">Current Events:</p>
+						<textarea rows="7" placeholder="Type list of events that are being tracked." name="GoogleHasEvents" id="GoogleEventDescription"></textarea>
+						<p>Recommended Events:</p>
+						<textarea rows="7" placeholder="Type a brief decsription of event recommendations."id="GoogleEventRecs"></textarea>
+					</div>
+
+					<hr>
+
+					<p><label>Is it an ecommerce website?</label></p>
+					<input type="radio" name="ecommerce" value="true" id="yesEC"><label for="yesEC">yes</label><br>
+					<input type="radio" name="ecommerce" value="false" id="noEC"><label for="noEC">no</label><br>
+
+					<div id="enhancedEcommerce">
+						<p>Should we recommend Enhanced Ecommerce? Is it logically possible?</p>
+						<input type="radio" name="enhancedEcommerce" value="yes" id="eeIsPossible"><label for="eeIsPossible">Yes</label><br>
+						<input type="radio" name="enhancedEcommerce" value="no" id="eeNotPossible"><label for="eeNotPossible">No</label><br>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="adobeStuff">
+					<legend>Adobe Analytics</legend>
+					<label for="aaID">What is the main Adobe account/property ID?</label>
+					<input type="text" name="mainAdobeID" placeholder="xxxxxx" class="aaID" id="aaID"><br>
+
+					<label for="abodeNotes">Notes:</label><br>
+					<textarea rows="7" id="AdobeNotes"></textarea>
+
+					<label for="AdobeAccountRecs">Recommendations:</label>
+					<textarea rows="7" id="AdobeAccountRecs"></textarea>
+
+					<hr>
+
+					<p><label>Do we have Adobe Analytics access?</label></p>
+					<input type="radio" name="AdobeAccess" value="yes" id="yesAdobeAccess"><label for="yesAdobeAccess">Yes</label><br>
+					<input type="radio" name="AdobeAccess" value="no" id="noAdobeAccess"><label for="noAdobeAccess">No</label><br>
+
+					<!-- if yes -->
+					<div id="hasAdobeAccess">
+						<p><label for="AdobeAccountSetup">Account Structure Setup</label></p>
+						<textarea rows="7" name="AdobeAccountSetup" id="AdobeAccountSetup"></textarea>
+
+						<hr>
+
+						<p><label>Are there any goals configured?</label></p>
+						<input type="radio" name="AdobeGoals" value="yes" id="AdobeYesGoals"><label for="AdobeYesGoals">Yes</label><br>
+						<input type="radio" name="AdobeGoals" value="no" id="AdobeNoGoals"><label for="AdobeNoGoals">No</label>
+
+						<p name="AdobeHasGoals">Current Goals:</p>
+						<textarea rows="7" placeholder="Type a brief description of the goals." name="AdobeHasGoals" id="AdobeGoalDescription"></textarea>
+						<p>Recommended Goals:</p>
+						<textarea rows="7" placeholder="Type a brief decsription of goal recommendations." id="AdobeGoalRecs"></textarea>
+						
+						<hr>
+
+						<p><label>Are there any filters configured?</label></p>
+						<input type="radio" name="AdobeFilters" value="yes" id="AdobeYesFilters"><label for="AdobeYesFilters">Yes</label><br>
+						<input type="radio" name="AdobeFilters" value="no" id="AdobeNoFilters"><label for="AdobeNoFilters">No</label>
+
+						<p name="AdobeHasFilters">Current Filters:</p>
+						<textarea rows="7" placeholder="Type a brief description of the filter configurations." name="AdobeHasFilters" id="AdobeFilterDescription"></textarea>
+						<p>Recommended filters:</p>
+						<textarea rows="7" placeholder="Type a brief description of filter recommendations." id="AdobeFilterRecs"></textarea>
+
+						<hr>
+
+						<p><label>Are there any events being tracked?</label></p>
+						<input type="radio" name="AdobeEvents" value="yes" id="AdobeYesEvents"><label for="AdobeYesEvents">Yes</label><br>
+						<input type="radio" name="AdobeEvents" value="no" id="AdobeNoEvents"><label for="AdobeNoEvents">No</label>
+
+						<p name="AdobeHasEvents">Current Events:</p>
+						<textarea rows="7" placeholder="Type list of events that are being tracked." name="AdobeHasEvents" id="AdobeEventDescription"></textarea>
+						<p>Recommended Events:</p>
+						<textarea rows="7" placeholder="Type a brief decsription of event recommendations."id="AdobeEventRecs"></textarea>
+					</div>
+
+				</fieldset>
+
+
+				<p><label for="importantTC">Any other important tracking code?</label><p>
+				<textarea rows="7" id="importantTC"></textarea><br>
+
+				<hr>
+
+				<div class="tagManager">
+					<p><label>Which tag manager is the website using?</label></p>
+					<span class="GTM"><input type="radio" name="tagManager" value="GTM" id="GTM" required><label for="GTM">GTM</label><br></span>
+					<span class="DTM"><input type="radio" name="tagManager" value="DTM" id="DTM" required><label for="DTM">DTM</label><br></span>
+					<input type="radio" name="tagManager" value="no tag manager" id="noTagManager" required><label for="noTagManager">None</label><br>
+					<input type="radio" name="tagManager" value="other" id="otherTagManager" required><label for="otherTagManager">Other </label><input type="text" name="otherTagManager" id="otherTagManagerInput"><br>
+
+					<hr>
+				</div>
+
+				<p><label>Are there any testing and optimization or VOC efforts going on?</label></p>
+				<input type="radio" name="efforts" value="TnO" id="TnO"><label for="TnO">Testing & Optimization</label><br>
+				<input type="radio" name="efforts" value="VOC" id="VOC"><label for="VOC">VOC</label><br>
+				<input type="radio" name="efforts" value="both" id="bothEfforts"><label for="bothEfforts">both</label><br>
+				<input type="radio" name="efforts" value="none" id="noEfforts"><label for="noEfforts">none</label><br>
+
+				<div id="hasTnO">
+					<p><label for="TnOplatform">What T&O platform is the client using?</label></p>
+					<input type="text" name="TnOplatform" placeholder="" id="TnOplatform"><br>
+				</div>
+				<div id="isVOCpossible">
+					<p><label for="isVOCpossible">Should we recommend VOC? Is it logically possible?</label></p>
+					<input type="radio" name="isVOCpossible" value="yes" id="isPossible"><label for="isPossible">Yes</label><br>
+					<input type="radio" name="isVOCpossible" value="no" id="notPossible"><label for="notPossible">No</label><br>
+				</div>
+
+				<div id="hasVOC">
+					<p><label for="VOCplatform">What VOC platform is the client using?</label></p>
+					<input type="text" name="VOCplatform" placeholder="" id="VOCplatform"><br>
+				</div>
+
+				<hr>
+
+				<p><label>Should we recommend call tracking? Is it logically possible?</label></p>
+				<input type="radio" name="callTracking" value="yes" id="yesCallTracking"><label for="yesCallTracking">Yes</label><br>
+				<input type="radio" name="callTracking" value="no" id="noCallTracking"><label for="noCallTracking">No</label><br>
+
+				<hr>
+
+				<h4>Page</h4>
+				<label for="loadTime">Average page load time: </label><input type="number" step="0.1" min="0" name="loadTime" id="loadTime">
+				
+				<h4>Status Codes</h4>
+				<table>
+					<tr>
+						<td><label for="status301">301</label></td>
+						<td><input type="number" min="0" name="status301" id="status301"></td>
+					</tr>
+					<tr>
+						<td><label for="status302">302</label></td>
+						<td><input type="number" min="0" name="status302" id="status302"></td>
+					</tr>
+					<tr>
+						<td><label for="status404">404</label></td>
+						<td><input type="number" min="0" name="status404" id="status404"></td>
+					</tr>
+					<tr>
+						<td><label for="status500">500</label></td>
+						<td><input type="number" min="0" name="status500" id="status500"></td>
+					</tr>
+				</table>
+
+				<hr>
+
+				
+
+
+				<div id="submitDiv" >
+					<button type="button" name="submit" value="SUBMIT" id="submitBtn" onclick="submitForm();">SUBMIT</button>
+				</div>
+			</form>
+ 				
+			<div id="output">
+			</div>
+		</div>
+	</body>
+</html>
